@@ -8,6 +8,7 @@ record_id="RECORD_ID"
 
 jsonip = open('http://jsonip.com').read
 if jsonip =~ /(\d+\.\d+\.\d+\.\d+)/
+  my_ip = $1
   cmd = "curl -H \"Accept: application/json\""
   cmd << " -H \"Content-Type: application/json\""
   cmd << " -H \"X-DNSimple-Domain-Token: #{token}\""
